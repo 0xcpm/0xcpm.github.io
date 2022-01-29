@@ -1,1 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+:root {
+    --bgColor:#1C1C1C;
+    --accentColor: #E6E6E6;
+    --font: 'Ubuntu', sans-serif;
+}
 /* Your custom styles goes here */
