@@ -19,7 +19,6 @@ body {
   margin-bottom: 1em;
 }
 a {
-  color: #444;
   text-decoration: none;
 }
 .clearfix:after {
@@ -40,6 +39,8 @@ a {
   padding: 2em;
 }
 header {
+  background: #fff;
+  color: #444;
   font-size: 1.8em;
   margin-bottom: 1.1em;
 }
@@ -65,6 +66,14 @@ nav.breadcrumbs {
   margin-bottom: 2em;
   padding: 0em 0em 0.8em 0.1em;
 }
+nav.breadcrumbs a,
+nav span {
+  display: inline;
+}
+nav.breadcrumbs a {
+  color: #444;
+  text-decoration: none;
+}
 #albums,
 #media {
   margin: 0em;
@@ -73,46 +82,24 @@ nav.breadcrumbs {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
-  margin-right: 2em;
-  margin-bottom: 3em;
-  position: relative;
   overflow: hidden;
-  width: 300px;
-  height: 220px;
   background-size: cover;
-  border-radius: 8px;
 }
-#albums .info {
-  position: absolute;
-  padding: 1em;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-size: 0.9em;
-  line-height: 1.2em;
-  margin: 0;
-  width: 100%;
-  font-weight: bold;
-  bottom: 0;
+.caption {
+  opacity: 0.7;
+}
+#albums .summary {
+  font-size: 1.2em;
 }
 #albums h3 {
-  font-size: 1.3em;
-  margin-bottom: 0.2em;
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
 }
-#media li {
-  float: left;
-  margin-right: 0.4em;
-  margin-bottom: 0.2em;
-  position: relative;
+.albumList,
+.albumList img {
   cursor: zoom-in;
 }
-#media a {
-  display: inline-block;
-}
-#media img {
-  border-radius: 8px;
-  display: block;
-}
-#media li .video-overlay {
+.video-overlay img {
   left: 50%;
   height: 48px;
   margin-left: -24px;
@@ -121,11 +108,22 @@ nav.breadcrumbs {
   top: 50%;
   width: 48px;
 }
-@media only screen and (max-width: 360px) {
-  #albums a {
-    width: 100%;
-    height: 190px;
-  }
+#lightSlider {
+  max-height: 400px;
+  min-height: 400px;
+}
+#lightSlider li {
+  height: 100%;
+}
+#lightSlider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.lSSlideOuter {
+  margin-bottom: 50px;
 }
 nav.pagination {
   color: #666;
