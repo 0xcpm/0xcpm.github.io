@@ -3,11 +3,13 @@
   "output": "./build_output",
   "title": "cpm",
   "sort-albums-by": "title",
-  "sort-media-by": "filename",
+  "sort-media-by": "date",
+  "sort-media-direction": "desc",
   "download-photos": "copy",
   "cleanup": true,
   "theme": "flow",
   "css": "./custom.css",
   "footer": "© 2022",
-  "usage-stats": false
+  "usage-stats": true
+  "embed-exif": true
 }
