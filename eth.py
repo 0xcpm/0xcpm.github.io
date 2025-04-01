@@ -35,8 +35,8 @@ for frame in range(frames):
     ax.set_ylim(-2, 2)
 
     # Set background color to #Fdf6e3 (light off-white)
-    fig.patch.set_facecolor('#000000')
-    ax.set_facecolor('#000000')
+    fig.patch.set_facecolor('#FFFFFF')
+    ax.set_facecolor('#FFFFFF')
 
     # Calculate the swinging angle with a higher speed
     angle = swing_amplitude * np.sin(swing_speed * frame * 2 * np.pi / frames)

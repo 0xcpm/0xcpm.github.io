@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 });
-
-  // Update root html class to set CSS colors
+// Update root html class to set CSS colors
   const toggleDarkMode = () => {
     const root = document.querySelector('html');
     root.classList.toggle('dark');
@@ -39,4 +38,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   checkColorScheme();
-

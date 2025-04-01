@@ -2,6 +2,7 @@ body
 {
   margin-right: 2500px;
   padding: 0;
+  padding-top: 10px;
   width: 97%;
   height: 100vh;
   /* make it look decent enough */
@@ -80,7 +81,7 @@ body
     left: 0;
     width: 180px; /* Set width */
     height: 100%; /* Full height */
-    background: var(--color-bg); /* Semi-transparent background */;
+    background: rgba(0, 0, 0, 1); /* Semi-transparent background */;
     padding: 60px 20px 20px; /* Add padding to avoid overlap with menu icon */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 20; /* Lower z-index compared to menu-icon */
@@ -123,7 +124,7 @@ body
 .image-gallery {
   display: grid;
   gap: 20px; /* Space between items */
-  padding: 50px;
+  padding: 30px;
   background: var(--color-bg);
   
   /* Default to a single column */
@@ -176,17 +177,7 @@ body
   Light Mode Color Scheme
 */
 :root {
-  --color-anchor: #337ab7;
-  --color-bg: #fdf6e3;
-  --color-blockquote-text: #777;
-  --color-code-bg: #f7f7f7;
-  --color-code-text: #333;
-  --color-divider: #cdcdcd;
-  --color-heading: #333;
-  --color-table-border: #c2c2c2;
-  --color-table-row-even: #f0f0f0;
-  --color-table-row-header: #e8e6e6;
-  --color-table-row-odd: #fbfbfb;
+  --color-bg: white;
   --color-toggle-accent: #ff7900;
   --color-text: black;
 )}
@@ -195,17 +186,7 @@ body
   Dark Mode Color Scheme
 */
 html.dark {
-  --color-anchor: #77e1cd;
-  --color-bg: #002b36;
-  --color-blockquote-text: #c0bcbc;
-  --color-code-bg: #313030;
-  --color-code-text: #fefefe;
-  --color-divider: #8b8b8b;
-  --color-heading: #dfdfdf;
-  --color-table-border: #767676;
-  --color-table-row-even: #181818;
-  --color-table-row-header: #000;
-  --color-table-row-odd: #333333;
+  --color-bg: black;
   --color-toggle-accent: #6c71c4;
   --color-text: white;
 }
@@ -231,6 +212,7 @@ html.dark {
   width: 24px;
   height: 24px;
   margin: 0 4px;
+  padding-left: 9px;
 }
 
 #color-mode-switch input[type=checkbox] {
