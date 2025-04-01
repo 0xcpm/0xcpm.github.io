@@ -1,0 +1,282 @@
+body
+{
+  margin-right: 2500px;
+  padding: 0;
+  width: 97%;
+  height: 100vh;
+  /* make it look decent enough */
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Iosevka";
+}
+
+@font-face {
+    font-family: "Jersey";
+    src: url(extras/Jersey25Charted-Regular.ttf);
+}
+@font-face {
+    font-family: "Iosevka";
+    src: url(extras/Iosevka.ttf);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: "Jersey";
+  font-size: 50px;
+}
+
+/* Menu icon styles */
+.menu-icon {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 25; /* Ensure it's above other content */
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  width: 42px; /* Set the square dimensions */
+  height: 42px; /* Same as width */
+  justify-content: center; /* Center the bars vertically */
+  align-items: center; /* Center the bars horizontally */
+  background: transparent; /* Optional: background color for clarity */
+ 
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 25px; /* Adjust width of the bars */
+  background: var(--color-text);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Slider menu for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed; /* Position the menu */
+    top: 0;
+    left: 0;
+    width: 180px; /* Set width */
+    height: 100%; /* Full height */
+    background: var(--color-bg); /* Semi-transparent background */;
+    padding: 60px 20px 20px; /* Add padding to avoid overlap with menu icon */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 20; /* Lower z-index compared to menu-icon */
+    transform: translateX(-180px); /* Initially hidden */
+    transition: transform 0.3s ease-in-out; /* Smooth slide */
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0); /* Slide into view */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Hide the menu icon on larger screens */
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none; /* Hide the hamburger menu */
+  }
+
+  .nav-links {
+    display: flex !important; /* Show the nav links as a horizontal bar */
+    position: static; /* Reset positioning */
+    flex-direction: row; /* Horizontal alignment */
+    gap: 20px;
+    transform: none; /* Reset any transforms */
+    height: auto; /* Adjust height */
+    width: auto; /* Adjust width */
+    padding: 0;
+    box-shadow: none; /* Remove shadow */
+  }
+}
+
+
+/* Container for the image gallery */
+.image-gallery {
+  display: grid;
+  gap: 20px; /* Space between items */
+  padding: 50px;
+  background: var(--color-bg);
+  
+  /* Default to a single column */
+  grid-template-columns: 1fr;
+}
+
+/* Responsive grid layout */
+@media (min-width: 768px) {
+  /* On medium screens, show up to 2 columns */
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  /* On large screens, show up to 3 columns */
+  .image-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Individual image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+}
+
+.image-container img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+#footer {
+  position: right;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;            /* Footer height */
+}
+
+
+
+/*
+  Color Scheme Toggle Switch
+  - Styled checkbox with slight animation when toggling
+*/
+/*
+  Light Mode Color Scheme
+*/
+:root {
+  --color-anchor: #337ab7;
+  --color-bg: #fdf6e3;
+  --color-blockquote-text: #777;
+  --color-code-bg: #f7f7f7;
+  --color-code-text: #333;
+  --color-divider: #cdcdcd;
+  --color-heading: #333;
+  --color-table-border: #c2c2c2;
+  --color-table-row-even: #f0f0f0;
+  --color-table-row-header: #e8e6e6;
+  --color-table-row-odd: #fbfbfb;
+  --color-toggle-accent: #ff7900;
+  --color-text: black;
+)}
+
+/*
+  Dark Mode Color Scheme
+*/
+html.dark {
+  --color-anchor: #77e1cd;
+  --color-bg: #002b36;
+  --color-blockquote-text: #c0bcbc;
+  --color-code-bg: #313030;
+  --color-code-text: #fefefe;
+  --color-divider: #8b8b8b;
+  --color-heading: #dfdfdf;
+  --color-table-border: #767676;
+  --color-table-row-even: #181818;
+  --color-table-row-header: #000;
+  --color-table-row-odd: #333333;
+  --color-toggle-accent: #6c71c4;
+  --color-text: white;
+}
+
+
+
+
+#color-mode-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--color-bg);
+  
+}
+
+#color-mode-switch > span {
+  font-size: 30px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+#color-mode-switch svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 4px;
+}
+
+#color-mode-switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#color-mode-switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 42px;
+  height: 21px;
+  border-radius: 30px;
+  background: var(--color-toggle-accent);
+  display: block;
+  position: relative;
+  margin: 0;
+}
+
+#color-mode-switch label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+#color-mode-switch input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+#color-mode-switch label:active:after {
+  width: 30px;
+}
+//*
+  Apply colors to general doc selectors
+*/
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/*
