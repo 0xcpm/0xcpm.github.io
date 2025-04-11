@@ -154,7 +154,7 @@ body
 }
 
 .image-container img {
-  width: 100%;  /* Make images responsive */
+   /* Make images responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Optional: rounded corners */
 }
