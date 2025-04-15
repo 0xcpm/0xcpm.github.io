@@ -81,7 +81,7 @@ body
     left: 0;
     width: 180px; /* Set width */
     height: 100%; /* Full height */
-    background: rgba(0, 0, 0, 1); /* Semi-transparent background */;
+    background: var(--color-bg); /* Semi-transparent background */;
     padding: 60px 20px 20px; /* Add padding to avoid overlap with menu icon */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 20; /* Lower z-index compared to menu-icon */
