@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&display=swap" rel="stylesheet">
 
-  <!-- ✅ jQuery (required by Lightbox2) -->
+  <!--  jQuery (required by Lightbox2) 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- ✅ Lightbox2 CDN -->
+  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
+-->
   <style>
     @media (prefers-color-scheme: light) {
       body {
@@ -27,7 +27,25 @@
    .lb-data .lb-number {
   text-transform: lowercase;
 }
+   /* Remove white background and padding from the image container */
+.lb-outerContainer,
+.lb-container {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 
+/* Remove space around the image and apply border radius */
+.lb-image {
+  border-radius: 10px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  box-shadow: none !important;
+  border: none !important;
+}
   </style>
 </head>
 <body>
@@ -38,13 +56,11 @@
   }
 </script>
 
-<!-- Dark Mode Switch -->
 <div id="color-mode-switch">
   <input type="checkbox" id="switch">
   <label for="switch">Dark Mode Toggle</label>
 </div>
 
-<!-- Navigation -->
 <nav class="navbar">
   <div class="menu-icon" id="menu-icon">
     <span></span><span></span><span></span>
@@ -56,7 +72,7 @@
   </ul>
 </nav>
 
-<!-- ✅ Image Gallery using Lightbox2 -->
+<!--  Image Gallery using Lightbox2 -->
 <div class="image-gallery">
 
   <div class="image-container" id="lila">
@@ -85,7 +101,6 @@
 
 </div>
 
-<!-- Your own JavaScript -->
 <script src="script.js"></script>
 
 </body>
