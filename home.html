@@ -1,61 +1,53 @@
-<!DOCTYPE HTML PUBLIC "-//W1C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html401/strict.dtd">
-<HTML>
-<HEAD>
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&display=swap');
-</style>
-    <meta name="viewport" content="width=device-width, initial-scale=0.6 user-scalable=no">
-    <META NAME="GENERATOR" CONTENT="imageindex 0.1">
-    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-    <META NAME="Title" CONTENT="image">
-    <META NAME="Columns" CONTENT="1">
-    <META NAME="ThumbnailX" CONTENT="650">
-    <META NAME="ThumbnailY" CONTENT="433">
-    <META NAME="DateBegin" CONTENT="201806230649.51">
-    <META NAME="DateEnd" CONTENT="202312300955.34">
-    <META NAME="NumImages" CONTENT="6">
-    <TITLE>home</TITLE>
-
-    <style>
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: var(--color-bg);
-                color: var(--color-text);
-            }
-        }
-    </style>
-    <LINK TYPE="text/css" REL="stylesheet" HREF="style.css">
-</HEAD>
-<BODY>
-<SCRIPT TYPE="text/javascript">
-if (parent.frames.length > 0) {
-   parent.location.href = self.document.location
-};
-</SCRIPT>
-
-
+<!DOCTYPE html>
+<html>
 <head>
- <!-- loading… -->
- <link rel="preload" href="extras/Jersey25Charted-Regular.ttf" as="font" type="font/ttf" crossorigin>
-</head>
+  <meta charset="UTF-8">
+  <title>home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no">
 
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+
+  <!-- ✅ jQuery (required by Lightbox2) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- ✅ Lightbox2 CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <style>
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+      }
+    }
+   .lb-close { display: none !important; }
+   .lb-data .lb-number {
+  text-transform: lowercase;
+}
+
+  </style>
+</head>
+<body>
+
+<script type="text/javascript">
+  if (parent.frames.length > 0) {
+    parent.location.href = self.document.location;
+  }
+</script>
+
+<!-- Dark Mode Switch -->
 <div id="color-mode-switch">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-  </svg>
   <input type="checkbox" id="switch">
   <label for="switch">Dark Mode Toggle</label>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-  </svg>
 </div>
 
+<!-- Navigation -->
 <nav class="navbar">
   <div class="menu-icon" id="menu-icon">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </div>
   <ul class="nav-links" id="nav-links">
     <li><a href="home.html">home</a></li>
@@ -64,47 +56,38 @@ if (parent.frames.length > 0) {
   </ul>
 </nav>
 
+<!-- ✅ Image Gallery using Lightbox2 -->
 <div class="image-gallery">
-  
-    <div class="image-container" id="21">
-      <A HREF="files/21.webp" TITLE="21.webp" NAME="21.webp"><IMG SRC="files/21.webp" WIDTH="433" HEIGHT="650" ALT="21.webp"></A>
-    </div>
-<!--
-    <div class="image-container">
-      <A HREF="files/42.webp" TITLE="42.webp" NAME="42.webp"><IMG SRC="files/42.webp" WIDTH="433" HEIGHT="650" ALT="42.webp"></A>
-    </div>
--->
-    <div class="image-container" id="k">
-      <A HREF="files/k.webp" TITLE="k.webp" NAME="k.webp"><IMG SRC="files/k.webp" WIDTH="433" HEIGHT="650" ALT="k.webp"></A>
-    </div>
-<!--
+
+  <div class="image-container" id="lila">
+    <a href="files/21.webp" data-lightbox="gallery" data-title="lila"><img src="files/21.webp" width="433" height="650" alt="21.webp"></a>
+  </div>
+
+  <div class="image-container" id="kassius">
+    <a href="files/k.webp" data-lightbox="gallery" data-title="kassius"><img src="files/k.webp" width="433" height="650" alt="k.webp"></a>
+  </div>
+
+  <div class="image-container" id="laïka">
+    <a href="files/l.webp" data-lightbox="gallery" data-title="laïka"><img src="files/l.webp" width="433" height="650" alt="l.webp"></a>
+  </div>
+
+  <div class="image-container" id="m">
+    <a href="files/m_01.webp" data-lightbox="gallery" data-title="mars"><img src="files/m_01.webp" width="433" height="650" alt="m_01.webp"></a>
+  </div>
+
+  <div class="image-container" id="amodeus">
+    <a href="files/27.webp" data-lightbox="gallery" data-title="amodeus"><img src="files/27.webp" width="433" height="650" alt="27.webp"></a>
+  </div>
+
   <div class="image-container">
-      <A HREF="files/c1.webp" TITLE="c1.webp" NAME="c1.webp"><IMG SRC="files/c1.webp" WIDTH="433" HEIGHT="650" ALT="c1.webp"></A>
-    </div>
- -->
-  <div class="image-container" id="l">
-      <A HREF="files/l.webp" TITLE="l.webp" NAME="l.webp"><IMG SRC="files/l.webp" WIDTH="433" HEIGHT="650" ALT="l.webp"></A>
-    </div>
+    <a href="files/57.webp" data-lightbox="gallery" data-title="anastassia"><img src="files/57.webp" width="433" height="650" alt="57.webp"></a>
+  </div>
 
-   <div class="image-container" id="m">
-      <A HREF="files/m_01.webp" TITLE="m_01.webp" NAME="m_01.webp"><IMG SRC="files/m_01.webp" WIDTH="433" HEIGHT="650" ALT="c1.webp"></A>
-    </div>
-    <div class="image-container" id="27">
-      <A HREF="files/27.webp" TITLE="27.webp" NAME="27.webp"><IMG SRC="files/27.webp" WIDTH="433" HEIGHT="650" ALT="27.webp"></A>
-    </div>
-
-     <div class="image-container">
-      <A HREF="files/57.webp" TITLE="57.webp" NAME="57.webp"><IMG SRC="files/57.webp" WIDTH="433" HEIGHT="650" ALT="57.webp"></A>
-    </div>
-<!--
-    <div class="image-container"
-      <A HREF="files/e.webp" TITLE="e.webp" NAME="e.webp"><IMG SRC="files/e.webp" WIDTH="433" HEIGHT="650" ALT="e.webp"></A>
-    </div>
- -->   
-</div>
- 
 </div>
 
+<!-- Your own JavaScript -->
 <script src="script.js"></script>
-</BODY>
-</HTML>
+
+</body>
+</html>
+
