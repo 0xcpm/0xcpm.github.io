@@ -262,7 +262,7 @@ html, body {
 }
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Iosevka;
 }
 
 .gallery {
@@ -308,6 +308,7 @@ body {
 
 .lightbox img {
     margin: auto;
+    border-radius: 10px;
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -316,7 +317,23 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
+.lightbox .close:hover,
+.lightbox .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .lightbox .prev,
 .lightbox .next {
