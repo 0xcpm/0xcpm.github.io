@@ -54,58 +54,43 @@
 </nav>
 
 <!--  Image Gallery using Lightbox2 -->
-<div class="image-gallery">
+<div class="gallery">
 
-  <div class="image-container" id="lila">
-    <a href="files/21.webp" data-lightbox="gallery" data-title="lila"><img src="files/21.webp" width="433" height="650" alt="21.webp"></a>
-  </div>
-<!--
- <div class="image-container" id="amodeus">
-    <a href="files/42.webp" data-lightbox="gallery" data-title="leon"><img src="files/42.webp" width="433" height="650" alt="42.webp"></a>
-  </div>
---> 
- <div class="image-container" id="kassius">
-    <a href="files/m_01.webp" data-lightbox="gallery" data-title="mars"><img src="files/m_01.webp" width="433" height="650" alt="m_01.webp"></a>
-  </div>
-<!--
-   <div class="image-container" id="kassius">
-    <a href="files/a.webp" data-lightbox="gallery" data-title="lisa"><img src="files/a.webp" width="433" height="650" alt="a.webp"></a>
-  </div>
- -->
- <div class="image-container" id="laïka">
-    <a href="files/l.webp" data-lightbox="gallery" data-title="laïka"><img src="files/l.webp" width="433" height="650" alt="l.webp"></a>
-  </div>
+        <div class="gallery-item">
+	<img src="files/21.webp" alt="1">
+        </div>
 
-  <div class="image-container" id="m">
-    <a href="files/k.webp" data-lightbox="gallery" data-title="kassius"><img src="files/k.webp" width="433" height="650" alt="k.webp"></a>
-  </div>
-<!--
-  <div class="image-container" id="amodeus">
-    <a href="files/24.jpg" data-lightbox="gallery" data-title="irene"><img src="files/24.jpg" width="433" height="650" alt="24.jpg"></a>
-  </div>
--->
-  <div class="image-container" id="amodeus">
-    <a href="files/27.webp" data-lightbox="gallery" data-title="amodeus"><img src="files/27.webp" width="433" height="650" alt="27.webp"></a>
-  </div>
+	<div class="gallery-item">
+        <img src="files/m_01.webp" alt="Photo 2">
+        </div>
 
-  <div class="image-container">
-    <a href="files/57.webp" data-lightbox="gallery" data-title="anastassia"><img src="files/57.webp" width="433" height="650" alt="57.webp"></a>
-  </div>
+	<div class="gallery-item">
+	<img src="files/l.webp" alt="Photo 3">
+        </div>
+
+	<div class="gallery-item">   
+	<img src="files/k.webp" alt="Photo 4">
+        </div>
+
+	<div class="gallery-item">
+	<img src="files/27.webp" alt="Photo 5">
+        </div>
+
+	<div class="gallery-item">    
+	<img src="files/57.webp" alt="Photo 6">
+        </div>
 
 </div>
 
-<script src="script.js"></script>
-<script>
-  // Add scroll lock when Lightbox opens
-  $(document).on('lightbox:opened', function() {
-    document.body.classList.add('lb-disable-scroll');
-  });
+<div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+	<img class="lightbox-content" id="lightbox-img">
+        <button class="prev" id="prev">&#10094;</button>
+        <button class="next" id="next">&#10095;</button>
+</div>
 
-  // Remove scroll lock when Lightbox closes
-  $(document).on('lightbox:closed', function() {
-    document.body.classList.remove('lb-disable-scroll');
-  });
-</script>
+<script src="script.js"></script>
+
 
 </body>
 </html>
