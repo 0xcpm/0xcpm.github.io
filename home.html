@@ -9,35 +9,16 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="preload" as="style" href="extras/Jersey25Charted-Regular.ttf">
-  <!--  jQuery (required by Lightbox2) 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
--->
+ 
+ 
   <style>
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       body {
         background-color: var(--color-bg);
         color: var(--color-text);
       }
     }
-   .lb-close { display: none !important; }
-   .lb-data .lb-number {
-  text-transform: lowercase;
-}
-   /* Remove white background and padding from the image container */
-.lb-outerContainer,
-.lb-container {
-  background-color: transparent !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-
+   
   </style>
 </head>
 <body>
@@ -84,7 +65,7 @@
   </div>
 --> 
  <div class="image-container" id="kassius">
-    <a href="files/k.webp" data-lightbox="gallery" data-title="kassius"><img src="files/k.webp" width="433" height="650" alt="k.webp"></a>
+    <a href="files/m_01.webp" data-lightbox="gallery" data-title="mars"><img src="files/m_01.webp" width="433" height="650" alt="m_01.webp"></a>
   </div>
 <!--
    <div class="image-container" id="kassius">
@@ -96,7 +77,7 @@
   </div>
 
   <div class="image-container" id="m">
-    <a href="files/m_01.webp" data-lightbox="gallery" data-title="mars"><img src="files/m_01.webp" width="433" height="650" alt="m_01.webp"></a>
+    <a href="files/k.webp" data-lightbox="gallery" data-title="kassius"><img src="files/k.webp" width="433" height="650" alt="k.webp"></a>
   </div>
 <!--
   <div class="image-container" id="amodeus">
@@ -114,6 +95,17 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+  // Add scroll lock when Lightbox opens
+  $(document).on('lightbox:opened', function() {
+    document.body.classList.add('lb-disable-scroll');
+  });
+
+  // Remove scroll lock when Lightbox closes
+  $(document).on('lightbox:closed', function() {
+    document.body.classList.remove('lb-disable-scroll');
+  });
+</script>
 
 </body>
 </html>
