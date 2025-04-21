@@ -186,7 +186,7 @@ body
   Dark Mode Color Scheme
 */
 html.dark {
-  --color-bg: #101827;
+  --color-bg: black;
   --color-toggle-accent: #6c71c4;
   --color-text: white;
 }
