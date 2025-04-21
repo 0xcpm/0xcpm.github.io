@@ -267,9 +267,20 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: repeat(3, 1fr); /* max 3 columns */
+    gap: 20px;
+    padding: 20px;
+}
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .gallery-item {
