@@ -92,3 +92,4 @@ document.addEventListener('keydown', (e) => {
             lightboxImage.src = '';
         }
     });
+

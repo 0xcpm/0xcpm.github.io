@@ -283,6 +283,7 @@ body {
     }
 }
 
+
 .gallery-item {
     position: relative;
     width: 100%;
@@ -375,4 +376,3 @@ body {
 .lightbox .next:hover {
     color: #bbb;
 }
-
