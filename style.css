@@ -120,55 +120,6 @@ body
 }
 
 
-/* Container for the image gallery */
-.image-gallery {
-  display: grid;
-  gap: 20px; /* Space between items */
-  padding: 30px;
-  background: var(--color-bg);
-  
-  /* Default to a single column */
-  grid-template-columns: 1fr;
-}
-
-/* Responsive grid layout */
-@media (min-width: 768px) {
-  /* On medium screens, show up to 2 columns */
-  .image-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  /* On large screens, show up to 3 columns */
-  .image-gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Individual image container */
-.image-container {
-  display: flex;
-  justify-content: center;
-  padding: 3px;
-}
-
-.image-container img {
-  width: 100%; /* Make images responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: rounded corners */
-}
-
-
-#footer {
-  position: right;
-  bottom: 0;
-  width: 100%;
-  height: 4rem;            /* Footer height */
-}
-
-
-
 /*
   Color Scheme Toggle Switch
   - Styled checkbox with slight animation when toggling
@@ -357,7 +308,7 @@ body {
     margin-top: -22px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     transition: 0.3s;
     user-select: none;
     border: none;
