@@ -89,44 +89,6 @@
         <button class="next" id="next">&#10095;</button>
 </div>
 
-<footer style="text-align: center; padding: 20px; background: var(--color-bg); margin-top: 40px;">
-  <button onclick="donateAvax()" style="padding: 8px 16px; background: #FF4D00; color: white; font-family: Iosevka; border: none; border-radius: 6px; cursor: pointer;">donate with MetaMask</button>
-  <div id="donation-status" style="margin-top: 10px; font-size: 0.85rem; color: #555;"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
-  <script>
-    const recipient = "0x6aad5CAE318df006d7585e4633A8a6239a2Cd739"; // Replace with your AVAX C-Chain wallet
-
-    async function donateAvax() {
-      const status = document.getElementById("donation-status");
-
-      if (!window.ethereum) {
-        status.textContent = "❌ MetaMask not detected.";
-        return;
-      }
-
-      try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-
-        const tx = await signer.sendTransaction({
-          to: recipient,
-          value: ethers.utils.parseEther("0.1")
-        });
-
-        console.log("transaction sent:", tx.hash);
-        status.innerHTML = `✅ donation sent! <a href="https://snowtrace.io/tx/${tx.hash}" target="_blank">${tx.hash}</a>`;
-      } catch (err) {
-        console.error("Donation error:", err);
-        status.textContent = "❌ donation cancelled or failed.";
-      }
-    }
-  </script>
-</footer>
-
-
 
 </body>
 <script src="script.js"></script>
