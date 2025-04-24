@@ -59,7 +59,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
   <script>
-    const recipient = "0x386A4418FE2f8CA30E65f6fcEe18C35EB39E7a1f"; // Replace with your AVAX C-Chain wallet
+    const recipient = "0x6aad5CAE318df006d7585e4633A8a6239a2Cd739"; // AVAX C-Chain wallet
 
     async function donateAvax() {
       const status = document.getElementById("donation-status");
@@ -77,14 +77,14 @@
 
         const tx = await signer.sendTransaction({
           to: recipient,
-          value: ethers.utils.parseEther("0.001")
+          value: ethers.utils.parseEther("0.1")
         });
 
-        console.log("Transaction sent:", tx.hash);
+        console.log("transaction sent:", tx.hash);
         status.innerHTML = `✅ Donation sent! <a href="https://snowtrace.io/tx/${tx.hash}" target="_blank">${tx.hash}</a>`;
       } catch (err) {
-        console.error("Donation error:", err);
-        status.textContent = "❌ Donation cancelled or failed.";
+        console.error("donation error:", err);
+        status.textContent = "❌ donation cancelled or failed.";
       }
     }
   </script>
