@@ -50,6 +50,44 @@
 <p style="font-family: Iosevka; text-align: right;font-size: 22px"><span>paris — london</span></p>
 <p style="font-family: Iosevka; text-align: right;font-size: 22px"><span>+44 7555075306</span></p>
 
+<div style="text-align: right; margin-top: 20px;">
+  <button onclick="donateAvax()" style="font-family: Iosevka; padding: 8px 16px; background: #FF4D00; color: white; border: none; border-radius: 6px; cursor: pointer;">
+    donate with MetaMask
+  </button>
+  <div id="donation-status" style="margin-top: 10px; font-size: 0.85rem; color: #555;"></div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script>
+    const recipient = "0x386A4418FE2f8CA30E65f6fcEe18C35EB39E7a1f"; // Replace with your AVAX C-Chain wallet
+
+    async function donateAvax() {
+      const status = document.getElementById("donation-status");
+
+      if (!window.ethereum) {
+        status.textContent = "❌ MetaMask not detected.";
+        return;
+      }
+
+      try {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+
+        const tx = await signer.sendTransaction({
+          to: recipient,
+          value: ethers.utils.parseEther("0.001")
+        });
+
+        console.log("Transaction sent:", tx.hash);
+        status.innerHTML = `✅ Donation sent! <a href="https://snowtrace.io/tx/${tx.hash}" target="_blank">${tx.hash}</a>`;
+      } catch (err) {
+        console.error("Donation error:", err);
+        status.textContent = "❌ Donation cancelled or failed.";
+      }
+    }
+  </script>
 
 
 <script src="script.js"></script>
