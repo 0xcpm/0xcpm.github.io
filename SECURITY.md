@@ -1,4 +1,4 @@
 
 ## Reporting a Vulnerability
 0xcpm@proton.me
-insta: @dzmznt
+insta:@0xdr6146
