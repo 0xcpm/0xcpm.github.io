@@ -38,7 +38,7 @@
     controls.dampingFactor = 0.05;
 
     const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(9, 2, 5);
+    light.position.set(0, 2, 5);
     scene.add(light);
 
     const ambientLight = new THREE.AmbientLight(0x404040); // soft ambient light
@@ -52,7 +52,7 @@
       objLoader.setMaterials(materials);
       objLoader.setPath('./');
       objLoader.load('model.obj', (object) => {
-        object.scale.set(9, 9, 9);
+        object.scale.set(7, 7, 7);
         scene.add(object);
       });
     });
