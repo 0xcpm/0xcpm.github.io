@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no">
+
+  <!-- Fonts & Styles -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="style" href="extras/Jersey25Charted-Regular.ttf">
+ 
+ 
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+      }
+    }
+   
+  </style>
+</head>
+<body>
+
+<div id="color-mode-switch">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <input type="checkbox" id="switch">
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</div>
+
+<!--
+<nav class="navbar">
+  <div class="menu-icon" id="menu-icon">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="home.html">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<!--  Image Gallery using AxeLightbox -->
+<div class="gallery">
+
+        <div class="gallery-item">
+	<img src="files/21.webp" alt="1">
+        </div>
+<!--
+	<div class="gallery-item">
+        <img src="files/a.webp" alt="Photo 2">
+        </div>
+-->
+	<div class="gallery-item">
+	<img src="files/l.webp" alt="Photo 3">
+        </div>
+
+	<div class="gallery-item">   
+	<img src="files/24.jpg" alt="Photo 4">
+        </div>
+
+	<div class="gallery-item">
+	<img src="files/k.webp" alt="Photo 5">
+        </div>
+        
+	<div class="gallery-item">
+        <img src="files/m_01.webp" alt="Photo 9">
+        </div>
+	
+<!--
+	<div class="gallery-item">
+        <img src="files/82.webp" alt="Photo 8">
+        </div>
+	
+	<div class="gallery-item">
+        <img src="files/b.webp" alt="Photo 9">
+        </div>
+	
+	<div class="gallery-item">
+        <img src="files/c1.webp" alt="Photo 9">
+        </div>
+-->
+	<div class="gallery-item">
+        <img src="files/57.webp" alt="Photo 9">
+        </div>
+
+	<div class="gallery-item">
+        <img src="files/27.webp" alt="Photo 9">
+        </div>
+
+ 	<div class="gallery-item">
+        <img src="files/83.jpg" alt="Photo 9">
+        </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+	<img class="lightbox-content" id="lightbox-img">
+        <button class="prev" id="prev">&#10094;</button>
+        <button class="next" id="next">&#10095;</button>
+</div>
+
+</body>
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
