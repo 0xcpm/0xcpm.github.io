@@ -18,7 +18,7 @@ def plot_shape(ax, shape, central_edge, color='#073642'):
 frames = 200  # Number of frames for the animation
 swing_amplitude = 0.1  # Amplitude of the swing
 swing_speed = 5  # Speed multiplier for faster swinging
-rotation_speed = 50 * np.pi / frames  # Rotation speed
+rotation_speed = 500 * np.pi / frames  # Rotation speed
 
 # Create a list to store the images
 images = []
