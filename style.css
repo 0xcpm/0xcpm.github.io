@@ -177,7 +177,7 @@ html.dark {
   text-indent: -9999px;
   width: 42px;
   height: 21px;
-  border-radius: 0px;
+  border-radius: 30px;
   background: var(--color-toggle-accent);
   display: block;
   position: relative;
