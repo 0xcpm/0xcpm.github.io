@@ -1,26 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <meta http-equiv="refresh" content="2;url=home.html">
-  <title>index</title>
+  <title>home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no">
+
+  <!-- Fonts & Styles -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="style" href="extras/Jersey25Charted-Regular.ttf">
+ 
+ 
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #000000; /* Light gray background */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+      }
     }
-    img {
-      max-width: 120px;
-      height: auto;
-    }
+   
   </style>
 </head>
 <body>
-  <img src="eth.gif" alt="eth">
+
+<!--
+<nav class="navbar">
+  <div class="menu-icon" id="menu-icon">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="home.html">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<!--  Image Gallery using AxeLightbox -->
+<div class="gallery">
+
+        <div class="gallery-item">
+	<img src="files/21.webp" alt="1">
+        </div>
+<!--
+	<div class="gallery-item">
+        <img src="files/a.webp" alt="Photo 2">
+        </div>
+-->
+	<div class="gallery-item">
+	<img src="files/l.webp" alt="Photo 3">
+        </div>
+<!--
+	<div class="gallery-item">   
+	<img src="files/24.jpg" alt="Photo 4">
+        </div>
+-->
+	<div class="gallery-item">
+	<img src="files/83.webp" alt="Photo 5">
+        </div>
+        
+	<div class="gallery-item">
+        <img src="files/k.webp" alt="Photo 9">
+        </div>
+	
+<!--
+	<div class="gallery-item">
+        <img src="files/82.webp" alt="Photo 8">
+        </div>
+	
+	<div class="gallery-item">
+        <img src="files/b.webp" alt="Photo 9">
+        </div>
+	
+	<div class="gallery-item">
+        <img src="files/c1.webp" alt="Photo 9">
+        </div>
+-->
+
+	<div class="gallery-item">
+        <img src="files/27.webp" alt="Photo 10">
+        </div>
+
+	<div class="gallery-item">
+        <img src="files/57.webp" alt="Photo 11">
+        </div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+	<img class="lightbox-content" id="lightbox-img">
+        <button class="prev" id="prev">&#10094;</button>
+        <button class="next" id="next">&#10095;</button>
+</div>
+
+</body>
+<script src="script.js"></script>
+
+
 </body>
 </html>
+
