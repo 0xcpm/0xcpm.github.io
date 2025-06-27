@@ -1,20 +1,23 @@
-body {
+body
+{
+
   padding: 0;
   padding-top: 10px;
   width: 97%;
   height: 100vh;
+  /* make it look decent enough */
   background: var(--color-bg);
   color: var(--color-text);
   font-family: "Iosevka";
 }
 
 @font-face {
-  font-family: "Jersey";
-  src: url(extras/Jersey25Charted-Regular.ttf);
+    font-family: "Jersey";
+    src: url(extras/Jersey25Charted-Regular.ttf);
 }
 @font-face {
-  font-family: "Iosevka";
-  src: url(extras/Iosevka.ttf);
+    font-family: "Iosevka";
+    src: url(extras/Iosevka.ttf);
 }
 
 /* Navbar styles */
@@ -48,21 +51,22 @@ body {
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 25;
+  z-index: 25; /* Ensure it's above other content */
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
-  width: 42px;
-  height: 42px;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
+  width: 42px; /* Set the square dimensions */
+  height: 42px; /* Same as width */
+  justify-content: center; /* Center the bars vertically */
+  align-items: center; /* Center the bars horizontally */
+  background: transparent; /* Optional: background color for clarity */
+
 }
 
 .menu-icon span {
   display: block;
   height: 3px;
-  width: 25px;
+  width: 25px; /* Adjust width of the bars */
   background: var(--color-text);
   transition: all 0.3s ease-in-out;
 }
@@ -72,22 +76,22 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    position: fixed;
+    position: fixed; /* Position the menu */
     top: 0;
     left: 0;
-    width: 180px;
-    height: 100%;
-    background: var(--color-bg);
-    padding: 60px 20px 20px;
+    width: 180px; /* Set width */
+    height: 100%; /* Full height */
+    background: var(--color-bg); /* Semi-transparent background */;
+    padding: 60px 20px 20px; /* Add padding to avoid overlap with menu icon */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 20;
-    transform: translateX(-180px);
-    transition: transform 0.3s ease-in-out;
+    z-index: 20; /* Lower z-index compared to menu-icon */
+    transform: translateX(-180px); /* Initially hidden */
+    transition: transform 0.3s ease-in-out; /* Smooth slide */
   }
 
   .nav-links.active {
     display: flex;
-    transform: translateX(0);
+    transform: translateX(0); /* Slide into view */
   }
 
   .nav-links li {
@@ -95,42 +99,58 @@ body {
   }
 }
 
+/* Hide the menu icon on larger screens */
+
 @media (min-width: 769px) {
   .menu-icon {
-    display: none;
+    display: none; /* Hide the hamburger menu */
   }
 
   .nav-links {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
+    display: flex !important; /* Show the nav links as a horizontal bar */
+    position: static; /* Reset positioning */
+    flex-direction: row; /* Horizontal alignment */
     gap: 20px;
-    transform: none;
-    height: auto;
-    width: auto;
+    transform: none; /* Reset any transforms */
+    height: auto; /* Adjust height */
+    width: auto; /* Adjust width */
     padding: 0;
-    box-shadow: none;
+    box-shadow: none; /* Remove shadow */
   }
 }
 
-/* Color scheme toggle */
+
+/*
+  Color Scheme Toggle Switch
+  - Styled checkbox with slight animation when toggling
+*/
+/*
+  Light Mode Color Scheme
+*/
 :root {
   --color-bg: white;
   --color-toggle-accent: #ff7900;
   --color-text: black;
-}
+)}
 
+/*
+  Dark Mode Color Scheme
+*/
 html.dark {
   --color-bg: black;
   --color-toggle-accent: #6c71c4;
   --color-text: white;
 }
 
+
+
+
 #color-mode-switch {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   background-color: var(--color-bg);
+
 }
 
 #color-mode-switch > span {
@@ -184,96 +204,126 @@ html.dark {
 #color-mode-switch label:active:after {
   width: 30px;
 }
-
+//*
+  Apply colors to general doc selectors
+*/
 html, body {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
-
 body {
-  margin: 0;
-  font-family: Iosevka;
+    margin: 0;
+    font-family: Iosevka;
 }
 
-/* ✅ Centered gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* max 3 columns */
+    gap: 20px;
+    padding: 20px;
 }
-
 @media (max-width: 900px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
+
 .gallery-item {
-  position: relative;
-  width: 100%;
-  padding-top: 150%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* 2:3 Aspect Ratio (portrait) */
+    overflow: hidden;
 }
 
 .gallery-item img {
-  border-radius: 0px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  cursor: pointer;
-  transition: transform 0.2s;
-  background-color: #000;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* no cropping or zooming */
+    cursor: pointer;
+    transition: transform 0.2s;
+    background-color: #000; /* letterboxing fill */
 }
 
-/* Lightbox styles */
+
+/* Lightbox styles (unchanged) */
 .lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .lightbox img {
-  margin: auto;
-  border-radius: 0px;
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    margin: auto;
+    border-radius: 0px;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
 .lightbox .close {
-  position: absolute;
-  top: 30px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .lightbox .close:hover,
 .lightbox .close:focus {
-  color: #bbb;
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lightbox .prev,
+.lightbox .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+    border: none;
+    background: none;
+}
+
+.lightbox .prev {
+    left: 0;
+}
+
+.lightbox .next {
+    right: 0;
+}
+
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    color: #bbb;
+}
