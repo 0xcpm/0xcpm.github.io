@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.getElementById("menu-icon");
   const navLinks = document.getElementById("nav-links");
 
@@ -6,6 +6,8 @@
     navLinks.classList.toggle("active");
   });
 });
+
+/*
 // Update root html class to set CSS colors
   const toggleDarkMode = () => {
     const root = document.querySelector('html');
