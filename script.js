@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.getElementById("menu-icon");
   const navLinks = document.getElementById("nav-links");
 
@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   checkColorScheme();
+*/
+
 const gallery = document.querySelector('.gallery');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
