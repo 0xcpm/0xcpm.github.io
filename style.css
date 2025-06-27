@@ -59,7 +59,7 @@ body
   height: 42px; /* Same as width */
   justify-content: center; /* Center the bars vertically */
   align-items: center; /* Center the bars horizontally */
-  background: transparent; /* Optional: background color for clarity */
+  background: black; /* Optional: background color for clarity */
 
 }
 
