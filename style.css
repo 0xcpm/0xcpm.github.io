@@ -128,7 +128,7 @@ body
   Light Mode Color Scheme
 */
 :root {
-  --color-bg: white;
+  --color-bg: black;
   --color-toggle-accent: #ff7900;
   --color-text: black;
 )}
@@ -177,7 +177,7 @@ html.dark {
   text-indent: -9999px;
   width: 42px;
   height: 21px;
-  border-radius: 0px;
+  border-radius: 10px;
   background: var(--color-toggle-accent);
   display: block;
   position: relative;
@@ -192,7 +192,7 @@ html.dark {
   width: 15px;
   height: 15px;
   background: #fff;
-  border-radius: 0px;
+  border-radius: 10px;
   transition: 0.3s;
 }
 
@@ -243,7 +243,7 @@ body {
 }
 
 .gallery-item img {
-    border-radius: 0px;
+    border-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
